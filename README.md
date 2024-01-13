@@ -14,6 +14,5 @@ Steps:
 7. Click the "Export" button.
 8. Run the following against the exported file in order to determine the interest for your bank account.
 ```bash
-$ cat "47160360_20240113_0121.csv" | grep INTEREST | cut -f7 -d',' | awk '{ sum += $1 } END { print sum }'
-28.15
+cat "47160360_20240113_0121.csv" | grep INTEREST | cut -f7 -d',' | awk '{ sum += $1 } END { print sum }'
 ```
