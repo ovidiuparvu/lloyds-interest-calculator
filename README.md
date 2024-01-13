@@ -12,7 +12,7 @@ Steps:
 5. Choose the desired date range.
 6. From the "Format" dropdown select the "Internet banking text/spreadsheet" option.
 7. Click the "Export" button.
-8. Run the following against the exported file in order to determine the interest for your bank account.
+8. Run the following against the exported file in order to determine the interest for your bank account for different days.
 ```bash
-cat "47160360_20240113_0121.csv" | grep INTEREST | cut -f7 -d',' | awk '{ sum += $1 } END { print sum }'
+cat "47160360_20240113_0121.csv" | grep INTEREST | awk -F, '{ print $7","$1 }'
 ```
