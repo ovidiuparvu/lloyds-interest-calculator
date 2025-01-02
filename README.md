@@ -15,5 +15,5 @@ Steps:
 8. Run the following against the exported file in order to determine the interest for your bank account for different days.
 ```bash
 echo "Source,Amount (GBP),Date" >interest.csv
-cat "47160360_20240113_0121.csv" | grep INTEREST | awk -F, '{ print "Bank Account XYZ,"$7","$1 }' >>interest.csv
+/usr/bin/cat "47160360_20240113_0121.csv" | grep INTEREST | awk -F, '{ print "Bank Account XYZ,"$7","$1 }' >>interest.csv
 ```
